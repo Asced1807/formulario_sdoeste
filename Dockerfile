@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Instalar las dependencias de la aplicación
-RUN pip install --no-cache-dir -r requerimientos.txt
+RUN pip install -r requerimientos.txt
 
 # Exponer el puerto de la aplicación (cambiar si es necesario)
 EXPOSE 8000
