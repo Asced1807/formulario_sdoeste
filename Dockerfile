@@ -25,8 +25,7 @@ COPY ./app ./app
 # Cambiar el directorio de trabajo para que 'modelo.py' se ejecute correctamente
 WORKDIR /code/app
 
-# Ejecutar modelo.py para configurar algo antes de iniciar la app
-RUN python modelo.py
+RUN python ./app/modelo.py
 
 # Cambiar de nuevo al directorio raíz del proyecto
 WORKDIR /code
