@@ -26,7 +26,7 @@ app = FastAPI(
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 # Configuración de las plantillas Jinja2
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="app/templates")
 
 # Ruta de bienvenida
 @app.get('/')
