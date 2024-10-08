@@ -1,0 +1,205 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #45a049;
+    --accent-color: #ff9800;
+    --background-color: #f9f9f9;
+    --form-background: #ffffff;
+    --text-color: #333333;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--accent-color);
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--form-background);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+legend {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.checkbox-container {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.checkbox-item {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: block;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+fieldset {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Mejoras de accesibilidad */
+:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Estado hover para elementos interactivos */
+input[type="text"]:hover,
+input[type="date"]:hover,
+select:hover,
+textarea:hover {
+    border-color: var(--accent-color);
+}
+
+/* Estilos para mensajes de error o validación */
+.error {
+    color: #d32f2f;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.success {
+    color: var(--primary-color);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
