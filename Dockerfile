@@ -17,7 +17,7 @@ COPY requerimientos.txt .
 
 # Instalar las dependencias de la aplicación
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requerimientos.txt
 
 # Copiar el resto de la aplicación
 COPY ./app ./app
