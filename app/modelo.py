@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, Date, Text, ARRAY, DateTime, cre
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship, Session 
 from sqlalchemy.sql import func
-from clave import DATABASE # AQUI ESTA MI CONEXION A POSTGRESQL CON CLAVE Y TODO NO VISIBLE 
+from app.clave import DATABASE # AQUI ESTA MI CONEXION A POSTGRESQL CON CLAVE Y TODO NO VISIBLE 
 
 
 engine = create_engine(DATABASE)
