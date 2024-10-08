@@ -22,6 +22,9 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copiar el resto de la aplicación
 COPY ./app ./app
 
+# Ejecutar modelo.py para configurar algo antes de iniciar la app
+RUN python ./app/modelo.py
+
 # El EXPOSE no es necesario en Railway, pero lo mantenemos por documentación
 EXPOSE 8000
 
