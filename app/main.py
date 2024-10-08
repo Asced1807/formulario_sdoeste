@@ -6,11 +6,11 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.ext.declarative import declarative_base
 from pydantic import BaseModel
 # Configuración de la conexión a la base de datos
-from app.clave import DATABASE
+from clave import DATABASE
 
 # Modelo de base model creado para el formulario y el modelo de la base de datos 
-from app.modelo import Formulario
-from app.esquema import FormularioBase
+from modelo import Formulario
+from esquema import FormularioBase
 # Crear la conexión a PostgreSQL
 engine = create_engine(DATABASE)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -23,10 +23,10 @@ app = FastAPI(
 )
 
 # Montar el directorio de archivos estáticos
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Configuración de las plantillas Jinja2
-templates = Jinja2Templates(directory="app/templates")
+templates = Jinja2Templates(directory="templates")
 
 # Ruta de bienvenida
 @app.get('/')
