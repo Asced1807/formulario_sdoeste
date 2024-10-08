@@ -22,8 +22,14 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copiar el resto de la aplicación
 COPY ./app ./app
 
+# Cambiar el directorio de trabajo para que 'modelo.py' se ejecute correctamente
+WORKDIR /code/app
+
 # Ejecutar modelo.py para configurar algo antes de iniciar la app
-RUN python ./app/modelo.py
+RUN python modelo.py
+
+# Cambiar de nuevo al directorio raíz del proyecto
+WORKDIR /code
 
 # El EXPOSE no es necesario en Railway, pero lo mantenemos por documentación
 EXPOSE 8000
@@ -33,3 +39,4 @@ ENV PORT=8000
 
 # Comando para ejecutar la aplicación
 CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
+
