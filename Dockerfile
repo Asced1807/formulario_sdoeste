@@ -17,7 +17,7 @@ COPY requerimientos.txt .
 
 # Instalar las dependencias de la aplicación
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requerimientos.txt
+    pip install --no-cache-dir -r requirements.txt
 
 # Copiar el resto de la aplicación
 COPY ./app ./app
@@ -28,5 +28,5 @@ EXPOSE 8000
 # Variable de entorno para el puerto
 ENV PORT=8000
 
-# Comando para ejecutar la aplicación (corregido para usar el módulo app)
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "${PORT}"]
+# Comando para ejecutar la aplicación
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
