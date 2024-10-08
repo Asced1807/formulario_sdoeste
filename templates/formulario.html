@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Investigación - Apagones Eléctricos</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+    <h1>FORMULARIO DE INVESTIGACIÓN</h1>
+    <h2>Análisis de Apagones Eléctricos en Santo Domingo Oeste</h2>
+    <p>Periodo 2024</p>
+
+    <!-- Información del Encuestador -->
+    <form id="formularioEncuesta"> <!-- Formulario inicia aquí -->
+        
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo" required>
+            <option value="">Seleccione...</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+
+        <label for="fecha_encuesta">Fecha de la Encuesta</label>
+        <input type="date" id="fecha_encuesta" name="fecha_encuesta" required>
+
+        <label for="ubicacion">Ubicación (Sector)</label>
+        <select id="ubicacion" name="ubicacion" required>
+            <option value="" disabled selected>Selecciona un sector</option>
+            <option value="Zona Industrial de Herrera">Zona Industrial de Herrera</option>
+            <option value="Km. 12 Av. Independencia / Calle Isabel Aguiar">Km. 12 Av. Independencia / Calle Isabel Aguiar</option>
+            <option value="Ensanche Altagracia">Ensanche Altagracia</option>
+            <option value="Hato Nuevo">Hato Nuevo</option>
+            <option value="Bayona">Bayona</option>
+            <option value="El Abanico">El Abanico</option>
+            <option value="El Libertador">El Libertador</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Las Palmas">Las Palmas</option>
+            <option value="Enriquillo">Enriquillo</option>
+            <option value="Manoguayabo">Manoguayabo</option>
+            <option value="Km. 14">Km. 14</option>
+            <option value="La Venta">La Venta</option>
+            <option value="Las Caobas">Las Caobas</option>
+            <option value="Km. 13 Carretera Sánchez / Av. Independencia">Km. 13 Carretera Sánchez / Av. Independencia</option>
+        </select>
+        
+
+
+<fieldset>
+    <legend>INFORMACIÓN DEL ENCUESTADO</legend>
+    
+    <!-- Tipo de Usuario -->
+    <label for="tipo_usuario">Tipo de Usuario</label>
+    <select id="tipo_usuario" name="tipo_usuario" required>
+        <option value="">Seleccione...</option>
+        <option value="residencial">Residencial</option>
+        <option value="comercial">Comercial</option>
+        <option value="industrial">Industrial</option>
+        <option value="institucional">Institucional</option>
+    </select>
+
+    <!-- Tiempo residiendo/operando en la zona -->
+    <label for="tiempo_residencia">Tiempo residiendo/operando en la zona</label>
+    <select id="tiempo_residencia" name="tiempo_residencia" required>
+        <option value="">Seleccione...</option>
+        <option value="menos 1 año">Menos de 1 año</option>
+        <option value="1-3 años">1-3 años</option>
+        <option value="4-6 años">4-6 años</option>
+        <option value="mas de 6 años">Más de 6 años</option>
+    </select>
+
+    <!-- Consumo mensual promedio (kWh) -->
+    <label for="consumo">Consumo mensual promedio (kWh)</label>
+    <input type="number" id="consumo" name="consumo" required>
+
+    <!-- Comentarios adicionales -->
+    <label for="comentarios_adicionales">Comentarios adicionales sobre su experiencia en la zona con la luz</label>
+    <textarea id="comentarios_adicionales" name="comentarios_adicionales" rows="4"></textarea>
+</fieldset>
+
+
+<fieldset>
+    <legend>FRECUENCIA Y DURACIÓN DE LOS APAGONES</legend>
+    
+    <!-- Frecuencia de los apagones -->
+    <label for="frecuencia_apagones">¿Con qué frecuencia experimenta apagones?</label>
+    <select id="frecuencia_apagones" name="frecuencia_apagones" required>
+        <option value="">Seleccione...</option>
+        <option value="diariamente">Diariamente</option>
+        <option value="2-3 veces por semana">2-3 veces por semana</option>
+        <option value="semanalmente">Semanalmente</option>
+        <option value="mensualmente">Mensualmente</option>
+        <option value="ocasionalmente">Ocasionalmente</option>
+    </select>
+
+    <!-- Duración típica de los apagones -->
+    <label for="duracion_apagones">Duración típica de los apagones</label>
+    <select id="duracion_apagones" name="duracion_apagones" required>
+        <option value="">Seleccione...</option>
+        <option value="menos de 1 hora">Menos de 1 hora</option>
+        <option value="1-3 horas">1-3 horas</option>
+        <option value="4-6 horas">4-6 horas</option>
+        <option value="mas de 6 horas">Más de 6 horas</option>
+    </select>
+
+    <!-- Horario en que ocurren los apagones -->
+    <label for="horario_apagones">¿En qué horario ocurren más frecuentemente los apagones?</label>
+    <select id="horario_apagones" name="horario_apagones" required>
+        <option value="">Seleccione...</option>
+        <option value="madrugada">Madrugada (12am-6am)</option>
+        <option value="manana">Mañana (6am-12pm)</option>
+        <option value="tarde">Tarde (12pm-6pm)</option>
+        <option value="noche">Noche (6pm-12am)</option>
+    </select>
+
+    <!-- Comentarios sobre frecuencia y duración -->
+    <label for="comentarios_frecuencia">Comentarios sobre la frecuencia o duración de los apagones</label>
+    <textarea id="comentarios_frecuencia" name="comentarios_frecuencia" rows="4"></textarea>
+</fieldset>
+
+
+<fieldset>
+    <legend>FACTORES RELACIONADOS A LOS APAGONES</legend>
+
+    <!-- Pregunta sobre la época del año con más apagones -->
+    <label for="epoca_apagones">¿Observa más apagones durante alguna época del año?</label>
+    <select id="epoca_apagones" name="epoca_apagones" required>
+        <option value="">Seleccione...</option>
+        <option value="verano">Verano</option>
+        <option value="invierno">Invierno</option>
+        <option value="temporada huracanes">Temporada de huracanes</option>
+        <option value="sin patron">Sin patrón específico</option>
+    </select>
+    
+    <!-- Condiciones climáticas relacionadas con apagones -->
+    <label>¿Qué condiciones climáticas coinciden con los apagones? (Puede marcar varios)</label>
+    <div class="checkbox-container">
+        <div class="checkbox-item">
+            <input type="checkbox" id="lluvia" name="condiciones_climaticas[]" value="lluvia">
+            <label for="lluvia">Lluvia fuerte</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="vientos" name="condiciones_climaticas[]" value="vientos">
+            <label for="vientos">Vientos fuertes</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="altas_temperaturas" name="condiciones_climaticas[]" value="altas temperaturas">
+            <label for="altas_temperaturas">Altas temperaturas</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="tormentas" name="condiciones_climaticas[]" value="tormentas">
+            <label for="tormentas">Tormentas</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="ninguna" name="condiciones_climaticas[]" value="ninguna">
+            <label for="ninguna">Ninguna aparente</label>
+        </div>
+    </div>
+
+    <!-- Pregunta sobre la relación entre apagones y otros factores -->
+    <label>¿Ha notado relación entre los apagones y alguno de estos factores? (Puede marcar varios)</label>
+    <div class="checkbox-container">
+        <div class="checkbox-item">
+            <input type="checkbox" id="alto_consumo" name="relacion_apagones[]" value="alto consumo">
+            <label for="alto_consumo">Alto consumo en el sector</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="mantenimiento" name="relacion_apagones[]" value="mantenimiento">
+            <label for="mantenimiento">Trabajos de mantenimiento</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="accidentes" name="relacion_apagones[]" value="accidentes">
+            <label for="accidentes">Accidentes en postes/transformadores</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="eventos" name="relacion_apagones[]" value="eventos">
+            <label for="eventos">Eventos especiales en la zona</label>
+        </div>
+        <input type="checkbox" id="otroCheckbox1" onclick="toggleOtherAction('otroCheckbox1', 'otroAccion1')"> Otro 
+        <input type="text" id="otroAccion1" name="relacion_apagones[]" style="display:none;" placeholder="Escriba aquí"><br><br>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>FACTURACIÓN Y CONSUMO</legend>
+
+    <label for="facturacion">Rango de facturación mensual promedio</label>
+    <select id="facturacion" name="facturacion" required>
+        <option value="">Seleccione...</option>
+        <option value="menos 1000">Menos de RD$1,000</option>
+        <option value="1000-3000">RD$1,000 - RD$5,000</option>
+        <option value="3000-5000">RD$5,000 - RD$10,000</option>
+        <option value="5000-10000">RD$10,000 - RD$20,000</option>
+        <option value="10000-20000">RD$20,000 - RD$30,000</option>
+        <option value="mas 20000">Más de RD$30,000</option>
+    </select>
+
+    <label>Durante los períodos de apagones</label>
+    <select name="cobro_apagones" required>
+        <option value="">Seleccione...</option>
+        <option value="cobro completo">Se le cobra el servicio completo</option>
+        <option value="cobro descuento">Se le cobra con descuento</option>
+        <option value="no cobro">No se cobra el servicio</option>
+        <option value="varia situacion">Varía según la situación</option>
+        <option value="no sabe">No sabe</option>
+    </select>
+
+    <label>¿Ha notado diferencias en la facturación después de períodos con muchos apagones?</label>
+    <select name="diferencias_facturacion" required>
+        <option value="">Seleccione...</option>
+        <option value="factura aumenta">Sí, la factura aumenta</option>
+        <option value="factura disminuye">Sí, la factura disminuye</option>
+        <option value="sin diferencia">No hay diferencia notable</option>
+        <option value="no sabe">No sabe</option>
+    </select>
+
+    <label>¿Ha recibido compensaciones o descuentos por apagones frecuentes?</label>
+    <select name="compensaciones_apagones" required>
+        <option value="">Seleccione...</option>
+        <option value="regularmente">Sí, regularmente</option>
+        <option value="ocasionalmente">Sí, ocasionalmente</option>
+        <option value="nunca">No, nunca</option>
+        <option value="no sabe">No sabe</option>
+    </select>
+
+    <label>Método de pago habitual</label>
+    <select name="metodo_pago" required>
+        <option value="">Seleccione...</option>
+        <option value="efectivo">Efectivo en oficina</option>
+        <option value="banco">Pago en banco</option>
+        <option value="transferencia">Transferencia electrónica</option>
+        <option value="cargo automatico">Cargo automático</option>
+    </select>
+
+    <label>¿Mantiene un registro propio de consumo de luz (Marque todos los que apliquen)</label>
+    <div class="checkbox-container">
+        <div class="checkbox-item">
+            <input type="checkbox" id="registro_horas" name="registro_horas[]" value="horas sin servicio">
+            <label for="registro_horas">Horas sin servicio</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="registro_lecturas" name="registro_horas[]" value="lecturas del medidor">
+            <label for="registro_lecturas">Lecturas del medidor</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="registro_montos" name="registro_horas[]" value="montos facturados">
+            <label for="registro_montos">Montos facturados</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="registro_pagos" name="registro_horas[]" value="pagos realizados">
+            <label for="registro_pagos">Pagos realizados</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="no_registros" name="registro_horas[]" value="no mantiene registros">
+            <label for="no_registros">No mantiene registros</label>
+        </div>
+    </div>
+
+    <label for="comentarios_facturacion">Comentarios sobre la facturación y el consumo</label>
+    <textarea id="comentarios_facturacion" name="comentarios_facturacion" rows="4"></textarea>
+</fieldset>
+
+<fieldset>
+    <legend>IMPACTO Y CONSECUENCIAS</legend>
+
+    <label>Nivel de impacto económico de los apagones</label>
+    <select name="impacto_economico" required>
+        <option value="">Seleccione...</option>
+        <option value="ninguno">Ninguno</option>
+        <option value="bajo">Bajo</option>
+        <option value="moderado">Moderado</option>
+        <option value="alto">Alto</option>
+        <option value="muy alto">Muy alto</option>
+    </select>
+
+    <label>Pérdidas económicas estimadas por apagón</label>
+    <select name="perdidas_economicas" required>
+        <option value="">Seleccione...</option>
+        <option value="menos de 1000">Menos de RD$1,000</option>
+        <option value="1000-5000">RD$1,000 - RD$5,000</option>
+        <option value="5000-10000">RD$5,000 - RD$10,000</option>
+        <option value="mas de 10000">Más de RD$10,000</option>
+    </select>
+
+    <label>¿Cuenta con sistema de respaldo?</label>
+    <select name="sistema_respaldo" required>
+        <option value="">Seleccione...</option>
+        <option value="no">No</option>
+        <option value="inversor">Inversor</option>
+        <option value="planta">Planta eléctrica</option>
+        <option value="paneles solares">Paneles Solar</option>
+    </select>
+
+    <label for="comentarios_impacto">Comentarios sobre el impacto económico de los apagones</label>
+    <textarea id="comentarios_impacto" name="comentarios_impacto" rows="4"></textarea>
+</fieldset>
+
+<fieldset>
+    <legend>COMUNICACIÓN Y RESPUESTA</legend>
+
+    <label>¿Recibe notificaciones previas sobre apagones programados?</label>
+    <select name="notificaciones_apagones" required>
+        <option value="">Seleccione...</option>
+        <option value="siempre">Siempre</option>
+        <option value="frecuentemente">Frecuentemente</option>
+        <option value="ocasionalmente">Ocasionalmente</option>
+        <option value="nunca">Nunca</option>
+    </select>
+
+    <label>Medio por el que recibe notificaciones</label>
+    <select name="medio_notificaciones" required>
+        <option value="">Seleccione...</option>
+        <option value="telefono">Teléfono/Celular</option>
+        <option value="correo">Correo electrónico</option>
+        <option value="redes">Redes sociales</option>
+        <option value="radio">Radio/TV</option>
+        <option value="no_recibe">No recibe notificaciones</option>
+    </select>
+
+    <label>Tiempo promedio de respuesta ante reportes de apagones</label>
+    <select name="tiempo_respuesta" required>
+        <option value="">Seleccione...</option>
+        <option value="menos de 1 hora">Menos de 1 hora</option>
+        <option value="1-3 horas">1-3 horas</option>
+        <option value="4-6 horas">4-6 horas</option>
+        <option value="mas de 6 horas">Más de 6 horas</option>
+        <option value="no reporta">No reporta apagones</option>
+    </select>
+
+    <label for="comentarios_comunicacion">Comentarios sobre la comunicación y respuesta ante apagones</label>
+    <textarea id="comentarios_comunicacion" name="comentarios_comunicacion" rows="4"></textarea>
+</fieldset>
+
+<fieldset>
+    <legend>DATOS TÉCNICOS</legend>
+
+    <label for="num_transformador">Número de transformador más cercano</label>
+    <input type="number" id="num_transformador" name="num_transformador" required>
+
+    <label>Estado visible de la infraestructura eléctrica</label>
+    <select name="estado_infraestructura" required>
+        <option value="">Seleccione...</option>
+        <option value="excelente">Excelente</option>
+        <option value="bueno">Bueno</option>
+        <option value="regular">Regular</option>
+        <option value="deficiente">Deficiente</option>
+    </select>
+
+    <label for="observaciones_tecnicas">Otras observaciones técnicas relevantes</label>
+    <textarea id="observaciones_tecnicas" name="observaciones_tecnicas" rows="4"></textarea>
+</fieldset>
+
+<fieldset>
+    <legend>SISTEMA PREDICTIVO DE APAGONES</legend>
+    <h3>UTILIDAD DEL SISTEMA PREDICTIVO</h3>
+
+    <label>¿Le sería útil un sistema que prediga posibles apagones en su zona?</label>
+    <select name="utilidad_sistema" required>
+        <option value="">Seleccione...</option>
+        <option value="extremadamente util">Extremadamente útil</option>
+        <option value="muy util">Muy útil</option>
+        <option value="moderadamente util">Moderadamente útil</option>
+        <option value="poco util">Poco útil</option>
+        <option value="nada util">Nada útil</option>
+    </select><br><br>
+
+    <label>¿Con cuánto tiempo de anticipación le gustaría recibir alertas de posibles apagones?</label>
+    <select name="tiempo_alerta" required>
+        <option value="">Seleccione...</option>
+        <option value="24 horas">24 horas antes</option>
+        <option value="12 horas">12 horas antes</option>
+        <option value="6 horas">6 horas antes</option>
+        <option value="3 horas">3 horas antes</option>
+        <option value="1 hora">1 hora antes</option>
+    </select><br><br>
+
+    <label>¿Qué acciones tomaría si recibe una alerta de posible apagón? (Puede marcar varios)</label><br>
+    <input type="checkbox" name="acciones_alerta[]" value="cargar dispositivos"> Cargar dispositivos electrónicos<br>
+    <input type="checkbox" name="acciones_alerta[]" value="ajustar horarios"> Ajustar horarios de actividades<br>
+    <input type="checkbox" name="acciones_alerta[]" value="preparar respaldo"> Preparar sistemas de respaldo<br>
+    <input type="checkbox" name="acciones_alerta[]" value="planificar actividades"> Planificar actividades comerciales<br>
+    <input type="checkbox" id="otroCheckbox" onclick="toggleOtherAction('otroCheckbox', 'otroAccion')"> Otro 
+    <input type="text" id="otroAccion" name="acciones_alerta[]" style="display:none;" placeholder="Escriba aquí"><br><br>
+</fieldset>
+
+
+<fieldset>
+    <h3>PREFERENCIAS DE NOTIFICACIÓN</h3>
+
+<label>¿Por qué medio preferiría recibir las alertas de predicción? (Seleccione los 3 principales)</label><br>
+<input type="checkbox" id="sms" name="medio_alerta[]" value="sms"> Mensaje de texto (SMS)<br>
+<input type="checkbox" id="whatsapp" name="medio_alerta[]" value="whatsapp"> WhatsApp<br>
+<input type="checkbox" id="aplicacion" name="medio_alerta[]" value="aplicacion"> Aplicación móvil dedicada<br>
+<input type="checkbox" id="correo" name="medio_alerta[]" value="correo"> Correo electrónico<br>
+<input type="checkbox" id="redes" name="medio_alerta[]" value="redes sociales"> Redes sociales<br>
+<input type="checkbox" id="llamada" name="medio_alerta[]" value="llamada"> Llamada telefónica automática<br>
+<input type="checkbox" id="portal" name="medio_alerta[]" value="portal web"> Portal web<br>
+<input type="checkbox" id="otro_medio_checkbox" onclick="toggleOtherAction('otro_medio_checkbox', 'otro_medio_input')"> Otro 
+<input type="text" id="otro_medio_input" name="medio_alerta[]" style="display: none;" placeholder="Escriba aquí"><br><br>
+
+<label>¿Qué información le gustaría recibir en las alertas? (Puede marcar varios)</label><br>
+<input type="checkbox" id="probabilidad" name="info_alerta[]" value="probabilidad"> Probabilidad del apagón<br>
+<input type="checkbox" id="duracion" name="info_alerta[]" value="duracion estimada"> Duración estimada<br>
+<input type="checkbox" id="zonas" name="info_alerta[]" value="zonas afectadas"> Zonas afectadas<br>
+<input type="checkbox" id="causa" name="info_alerta[]" value="causa probable"> Causa probable<br>
+<input type="checkbox" id="recomendaciones" name="info_alerta[]" value="recomendaciones"> Recomendaciones de preparación<br>
+<input type="checkbox" id="tiempo" name="info_alerta[]" value="tiempo restauracion"> Tiempo estimado de restauración<br>
+<input type="checkbox" id="otro_info_checkbox" onclick="toggleOtherAction('otro_info_checkbox', 'otro_info_input')"> Otro 
+<input type="text" id="otro_info_input" name="info_alerta[]" style="display: none;" placeholder="Escriba aquí"><br><br>
+</fieldset>
+
+
+<fieldset>
+    <h3>FUNCIONALIDADES DESEADAS</h3>
+
+<label>¿Qué funcionalidades le gustaría tener en un sistema de predicción? (Puede marcar varios)</label><br>
+<input type="checkbox" id="mapa_tiempo_real" name="funcionalidades[]" value="mapa tiempo real"> Mapa en tiempo real de zonas afectadas<br>
+<input type="checkbox" id="historial_apagones" name="funcionalidades[]" value="historial apagones"> Historial de apagones en su zona<br>
+<input type="checkbox" id="estadisticas" name="funcionalidades[]" value="estadisticas"> Estadísticas de frecuencia y duración<br>
+<input type="checkbox" id="reportes_personalizados" name="funcionalidades[]" value="reportes personalizados"> Reportes personalizados<br>
+<input type="checkbox" id="notificaciones_restauracion" name="funcionalidades[]" value="notificaciones restauracion"> Notificaciones de restauración del servicio<br>
+<input type="checkbox" id="comunicacion_empresa" name="funcionalidades[]" value="comunicacion empresa"> Comunicación directa con la empresa eléctrica<br>
+<input type="checkbox" id="otro_funcionalidad_checkbox" onclick="toggleOtherAction('otro_funcionalidad_checkbox', 'otro_funcionalidad_input')"> Otro 
+<input type="text" id="otro_funcionalidad_input" name="funcionalidades[]" style="display: none;" placeholder="Escriba aquí"><br><br>
+
+<label>¿Estaría dispuesto a compartir datos de su consumo eléctrico para mejorar la precisión de las predicciones?</label><br>
+<select name="compartir_datos" required>
+    <option value="">Seleccione una opción...</option>
+    <option value="definitivamente si">Definitivamente sí</option>
+    <option value="probablemente si">Probablemente sí</option>
+    <option value="no estoy seguro">No estoy seguro</option>
+    <option value="probablemente no">Probablemente no</option>
+    <option value="definitivamente no">Definitivamente no</option>
+</select><br><br>
+</fieldset>
+
+<fieldset>
+    <h3>VALORACIÓN DEL SISTEMA</h3>
+
+<label>¿Cuánto mejoraría su planificación diaria contar con un sistema de predicción de apagones?</label><br>
+<select name="mejora_planificacion" required>
+    <option value="">Seleccione una opción...</option>
+    <option value="significativamente">Significativamente</option>
+    <option value="considerablemente">Considerablemente</option>
+    <option value="moderadamente">Moderadamente</option>
+    <option value="ligeramente">Ligeramente</option>
+    <option value="no mejoraria">No mejoraría</option>
+</select><br><br>
+
+<label>¿Qué beneficios esperaría obtener de un sistema predictivo? (Puede marcar varios)</label><br>
+<input type="checkbox" name="beneficios[]" value="mejor planificacion"> Mejor planificación de actividades<br>
+<input type="checkbox" name="beneficios[]" value="reduccion perdidas"> Reducción de pérdidas económicas<br>
+<input type="checkbox" name="beneficios[]" value="mayor tranquilidad"> Mayor tranquilidad<br>
+<input type="checkbox" name="beneficios[]" value="mejor preparacion"> Mejor preparación ante apagones<br>
+<input type="checkbox" name="beneficios[]" value="optimizacion uso respaldo"> Optimización del uso de sistemas de respaldo<br>
+<input type="checkbox" id="otro_beneficio_checkbox" onclick="toggleOtherAction('otro_beneficio_checkbox', 'otro_beneficio_input')"> Otro 
+<input type="text" id="otro_beneficio_input" name="beneficios[]" style="display: none;" placeholder="Escribe aqui"><br><br>
+
+<label>¿Qué tan confiable esperaría que fuera el sistema de predicción?</label><br>
+<select name="confiabilidad_sistema" required>
+    <option value="">Seleccione una opción...</option>
+    <option value="90-100">90-100% de precisión</option>
+    <option value="80-89">80-89% de precisión</option>
+    <option value="70-79">70-79% de precisión</option>
+    <option value="60-69">60-69% de precisión</option>
+    <option value="menos del 60">Menos del 60% de precisión</option>
+</select><br><br>
+</fieldset>
+
+<fieldset>
+    <h3>PARTICIPACIÓN Y RETROALIMENTACIÓN</h3>
+
+<label>¿Estaría dispuesto a participar en una fase piloto del sistema?</label><br>
+<select name="participar_piloto" required>
+    <option value="">Seleccione una opción...</option>
+    <option value="definitivamente si">Sí, definitivamente</option>
+    <option value="probablemente si">Probablemente sí</option>
+    <option value="tal vez">Tal vez</option>
+    <option value="probablemente no">Probablemente no</option>
+    <option value="definitivamente no">No, definitivamente</option>
+</select><br><br>
+
+<label>¿Le interesaría poder reportar apagones o proporcionar retroalimentación a través del sistema?</label><br>
+<select name="interes_reportar" required>
+    <option value="">Seleccione una opción...</option>
+    <option value="muy interesado">Muy interesado</option>
+    <option value="interesado">Interesado</option>
+    <option value="neutro">Neutro</option>
+    <option value="poco interesado">Poco interesado</option>
+    <option value="nada interesado">Nada interesado</option>
+</select><br><br>
+</fieldset>
+
+<button type="submit">Enviar Formulario</button>
+
+
+<script>
+function toggleOtherAction(checkboxId, inputId) {
+    var checkbox = document.getElementById(checkboxId);
+    var textInput = document.getElementById(inputId);
+    textInput.style.display = checkbox.checked ? 'inline' : 'none';
+    if (checkbox.checked) {
+        textInput.required = true;
+    } else {
+        textInput.required = false;
+        textInput.value = '';
+    }
+}
+
+document.querySelector('form').onsubmit = function(e) {
+    var otherCheckboxes = document.querySelectorAll('input[type="checkbox"][id$="_checkbox"], #otroCheckbox, #otroCheckbox1');
+    otherCheckboxes.forEach(function(checkbox) {
+        var inputId = checkbox.id.replace('Checkbox', 'Accion').replace('_checkbox', '_input');
+        var textInput = document.getElementById(inputId);
+        if (checkbox.checked && textInput.value.trim() !== '') {
+            checkbox.disabled = true;  // Deshabilita el checkbox
+        } else if (!checkbox.checked) {
+            textInput.disabled = true;  // Deshabilita el input de texto si no está marcado
+        }
+    });
+};
+
+    document.getElementById('formularioEncuesta').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // Crear objeto con los datos del formulario
+    const formData = new FormData(this);
+    const datos = {};
+    
+    // Convertir FormData a objeto
+    formData.forEach((value, key) => {
+        // Manejo especial para checkboxes o campos múltiples
+        if (key.endsWith('[]')) {
+            const cleanKey = key.slice(0, -2);
+            if (!datos[cleanKey]) {
+                datos[cleanKey] = [];
+            }
+            datos[cleanKey].push(value);
+        } else {
+            if (datos[key]) {
+                if (!Array.isArray(datos[key])) {
+                    datos[key] = [datos[key]];
+                }
+                datos[key].push(value);
+            } else {
+                datos[key] = value;
+            }
+        }
+    });
+
+    try {
+        const response = await fetch('http://127.0.0.1:8000/enviar/?local_kw=valor', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(datos)
+        });
+
+        if (!response.ok) {
+            throw await response.json();
+        }
+
+        const result = await response.json();
+        console.log(result);
+        
+        // Redirigir a la página de confirmación
+        window.location.href = "/validacion";
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error al enviar los datos');
+    }
+});
+
+</script>
+    </form>   
+
+</body>
+</html>
+
