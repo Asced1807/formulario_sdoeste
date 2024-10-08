@@ -23,7 +23,7 @@ app = FastAPI(
 )
 
 # Montar el directorio de archivos estáticos
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 # Configuración de las plantillas Jinja2
 templates = Jinja2Templates(directory="templates")
